@@ -1,12 +1,14 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 function App() {
+
+  const [criptos,setCriptos] = useState()
 
   useEffect(()=> {
     fetch("https://api.coincap.io/v2/assets")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data)
+        setCriptos (data.data)
       })
       .catch(()=>{
         console.error("La petición falló")
