@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    padding: 30px;
+    background: linear-gradient(145deg, #000920, #34027e);
+    margin: 0px;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}

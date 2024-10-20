@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "./App.css" 
+import Cripto from "./Cripto"
 
 function App() {
 
@@ -23,13 +24,18 @@ function App() {
   return (
     <>
       <h1>Lista de criptomonedas</h1>
-      <ol>
-        { 
-          criptos.map(({id, name, priceUsd}) => (
-            <li key={id}>Nombre: {name} Precio: {priceUsd} </li>
+      <div className="criptocards-container">
+        {
+          criptos.map(({id, name, priceUsd, symbol, changePercent24Hr}) => (
+            <Cripto 
+            key={id} 
+            name={name} 
+            priceUsd={priceUsd} 
+            symbol ={symbol} 
+            changePercent24Hr={changePercent24Hr} />
           ))
         }
-      </ol>
+      </div>
     </>
   )
 }
