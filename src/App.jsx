@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import axios from "axios"
 
 function App() {
 
@@ -8,10 +7,10 @@ function App() {
   const [criptos,setCriptos] = useState()
 
   useEffect(()=> {
-    axios.get(`${API_URL}/assets`)
+    fetch(`${API_URL}/assets`)
+      .then((resp) => resp.json())
       .then((data) => {
-        console.log(data)
-        //setCriptos (data.data)
+        setCriptos (data.data)
       })
       .catch(()=>{
         console.error("La petición falló")
